@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS 자식 선택자</title>
+        <style>
+            #container {
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 15px;
+            }
+
+            #container > p > span {
+                font-size: 18px;
+                color: orange;
+            }
+
+            #container > p:nth-child(2) {
+                border: 1px solid black;
+            }
+
+            #container > p:nth-child(3), p:nth-child(4) {
+                text-decoration: underline;
+            }
+
+        </style>
+        <!-- padding ? ? > 위아래, 양옆 / ? ? ? ? > 위 오른쪽 아래 왼쪽 (시계방향) -->
+    </head>
+    <body>
+        <h3>자식 선택자</h3>
+        <div id="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                <span>voluptatem. Molestiae porro, iste animi id est, perspiciatis</span>
+                beatae quas illo ratione accusantium illum excepturi neque
+                aliquam. Quod fugit neque laborum!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                <span>voluptatem. Molestiae porro, iste animi id est, perspiciatis</span>
+                beatae quas illo ratione accusantium illum excepturi neque
+                aliquam. Quod fugit neque laborum!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                <span>voluptatem. Molestiae porro, iste animi id est, perspiciatis</span>
+                beatae quas illo ratione accusantium illum excepturi neque
+                aliquam. Quod fugit neque laborum!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                <span>voluptatem. Molestiae porro, iste animi id est, perspiciatis</span>
+                beatae quas illo ratione accusantium illum excepturi neque
+                aliquam. Quod fugit neque laborum!
+            </p>
+        </div>
+    </body>
+</html>
