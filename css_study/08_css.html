@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .upper {
+                width: 1000px;
+                height: 100px;
+                background-color: aqua;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .center {
+                width: 1000px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: aquamarine;
+            }
+            .lower {
+                width: 1000px;
+                height: 1000px;
+                display: flex;
+                align-self: center;
+                justify-content: space-evenly;
+                background-color: rgb(211, 127, 67);
+            }
+            .bar1 {
+                width: 750px;
+                height: 50px;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                background-color: chartreuse;
+            }
+            .bar2 {
+                width: 700px;
+                height: 50px;
+                border: 2px solid green;
+                box-sizing: border-box;
+                background-color: white;
+            }
+            .bar3 {
+                width: 750px;
+                height: 70px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: blueviolet;
+            }
+            .bar3 > li {
+                width: 50px;
+                height: 50px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                background-color: cadetblue;
+            }
+
+            .lower_left {
+                width: 650px;
+                height: 940px;
+                margin-top: 30px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                background-color: cornflowerblue;
+            }
+
+            .lower_rigth {
+                width: 300px;
+                height: 940px;
+                margin-top: 30px;
+                background-color: chartreuse;
+            }
+            .top {
+                width: 550px;
+                height: 180px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: forestgreen;
+            }
+
+            .mid1 {
+                width: 550px;
+                height: 220px;
+                margin: 0;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgb(207, 126, 26);
+            }
+
+            .mid2 {
+                width: 550px;
+                height: 220px;
+                margin: 0;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgb(207, 126, 26);
+            }
+
+            .bot {
+                width: 550px;
+                height: 180px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 20px;
+                background-color: forestgreen;
+            }
+            .top > div {
+                width: 260px;
+                height: 160px;
+                background-color: darkturquoise;
+            }
+
+            .bot > div {
+                width: 260px;
+                height: 160px;
+                background-color: darkturquoise;
+            }
+
+            .midbox {
+                width: 260px;
+                height: 200px;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="upper">
+            <div class="bar1">
+                <div class="bar2"></div>
+            </div>
+        </div>
+        <div class="center">
+            <ul class="bar3">
+                <li>블로그</li>
+                <li>카페</li>
+                <li>뉴스</li>
+                <li>메일</li>
+                <li>증권</li>
+                <li>웹툰</li>
+            </ul>
+        </div>
+        <div class="lower">
+            <div class="lower_left">
+                <div class="top">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="mid1">
+                    <div class="midbox"></div>
+                    <div class="midbox"></div>
+                </div>
+                <div class="mid2">
+                    <div class="midbox"></div>
+                    <div class="midbox"></div>
+                </div>
+                <div class="bot">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="lower_rigth"></div>
+        </div>
+    </body>
+</html>

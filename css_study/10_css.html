@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>position: static</title>
+        <style>
+            #container {
+                width: 300px;
+                height: 400px;
+                background-color: orange;
+                position: relative;
+                overflow: auto;
+            }
+            #container > div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid yellow;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #container > div:nth-child(2) {
+                position: sticky;
+                top: 30px;
+                left: 30px;
+                /*
+                position: relative
+                원래 자기가 있던 위치 기준
+                top, bottom, left, right로 위치를 조정
+
+                position: absolute
+                원래 위치 기준이 아닌 상위 요소 중 relative인걸 기준으로 한다
+                없으면 가장 상위 태그를 기준으로 삼는다
+                */
+                background-color: aquamarine;
+                opacity: 0.8;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div>position: static</div>
+            <div>position: absolute</div>
+            <div>position: static</div>
+            <div>position: static</div>
+            <div>position: static</div>
+            <div>position: static</div>
+            <div>position: static</div>
+        </div>
+    </body>
+</html>

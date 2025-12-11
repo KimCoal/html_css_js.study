@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .upper {
+                width: 1000px;
+                height: 150px;
+                justify-content: space-evenly;
+                display: flex;
+                align-items: center;
+                background-color: blanchedalmond;
+            }
+            .center,
+            .lower {
+                width: 1000px;
+                height: 175px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: salmon;
+            }
+
+            .upper > div {
+                width: 430px;
+                height: 110px;
+                background-color: brown;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+
+            .center > div,
+            .lower > div {
+                width: 430px;
+                height: 140px;
+                display: flex;
+                align-items: center;
+                background-color: chocolate;
+            }
+
+            .upper h3,
+            .upper p {
+                margin: 0;
+
+                
+                line-height: 1.4;
+            }
+            .img {
+                width: 100px;
+                height: 100px;
+                margin-left: 15px;
+                background-color: blueviolet;
+            }
+            .text {
+                margin-left: 15px;
+                flex: 1; /* 텍스트가 남은 공간을 전부 차지 */
+                line-height: 1.4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="upper">
+            <div>
+                <h3>제목1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    iusto porro, aperiam aliquid. Fugit quisquam sunt voluptates
+                    facere.
+                </p>
+            </div>
+            <div>
+                <h3>제목1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    iusto porro, aperiam aliquid. Fugit quisquam sunt voluptates
+                    facere.
+                </p>
+            </div>
+        </div>
+        <div class="center">
+            <div>
+                <div class="img">img</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    corporis fuga similique laborum repellendus totam, ratione
+                </div>
+            </div>
+            <div>
+                <div class="img">img</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    corporis fuga similique laborum repellendus totam, ratione
+                </div>
+            </div>
+        </div>
+        <div class="lower">
+            <div>
+                <div class="img">img</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    corporis fuga similique laborum repellendus totam, ratione
+                </div>
+            </div>
+            <div>
+                <div class="img">img</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    corporis fuga similique laborum repellendus totam, ratione
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
