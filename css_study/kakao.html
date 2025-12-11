@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kakao Login Clone</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-family: sans-serif;
+            }
+            .container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main {
+                width: 340px;
+                text-align: center;
+            }
+            .title {
+                margin-bottom: 30px;
+            }
+            .logo_kakao {
+                display: block;
+                width: 88px;
+                height: 27px;
+                margin: 0 auto;
+                background-image: url("https://i.namu.wiki/i/IqmOmj71Vd9La5zunuoLdkOXMuy8BHcg2Hk5KN-oGgJp1gvlCytffdNpbUwd3P4WfORoqi7cad4f71d6uOgEug.svg");
+                background-size: 88px 27px;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+            .input_box {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .input_box > input {
+                width: 100%;
+                height: 46px;
+                padding: 8px 0;
+                border: none;
+                background: none;
+                border-bottom: 1px solid #555;
+                font-size: 15px;
+                font-weight: auto;
+                outline: none;
+                transition: all 0.16s ease;
+            }
+
+            .input_box > input::placeholder {
+                color: #aaa;
+                font-weight: 400;
+            }
+
+            .input_box > input:focus {
+                border-bottom: 1px solid #f8d000;
+                background-color: #ffffff;
+            }
+
+            .auto_log {
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+                color: #555;
+            }
+            .auto_log > input {
+                margin: 6px;
+            }
+            .login_btn {
+                width: 100%;
+                background-color: #fee500;
+                border: none;
+                border-radius: 6px;
+                padding: 14px 0;
+                font-size: 15px;
+                font-weight: normal;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .login_btn:hover {
+                background-color: #f4dc00;
+            }
+            .divider {
+                display: flex;
+                align-items: center;
+                margin: 12px;
+            }
+
+            .divider::before,
+            .divider::after {
+                content: "";
+                flex: auto;
+                height: 1px;
+                background-color: #e8e4e4;
+            }
+            .divider > span {
+                font-size: 12px;
+                margin: 0 10px;
+                font-weight: 500;
+                color: #aaa;
+            }
+            .QR_log_btn {
+                width: 100%;
+                background-color: #e7e7e7;
+                border: none;
+                border-radius: 6px;
+                padding: 14px 0;
+                font-size: 15px;
+                font-weight: normal;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .QR_log_btn:hover {
+                background-color: #aeaeae;
+            }
+            .bottom_area {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                font-size: 12px;
+            }
+
+            .bottom_area a {
+                text-decoration: none;
+                color: #bfbfbf;
+            }
+
+            .bottom_area a:hover {
+                text-decoration: underline;
+            }
+
+            .right_links {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .bar {
+                margin-bottom: 1px;
+                color: #c7c2c2;
+            }
+            footer {
+                margin-top: 40px;
+                padding: 20px 0;
+                text-align: center;
+                font-size: 13px;
+                color: #bbb;
+                background-color: #f1f1f1;
+            }
+
+            .footer_links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 12px;
+            }
+
+            .footer_links > a {
+                color: #aaa;
+                text-decoration: none;
+            }
+
+            .footer_links > a:hover {
+                text-decoration: underline;
+            }
+
+            .footer_links > .lang {
+                cursor: pointer;
+            }
+
+            .bar {
+                color: #aaa;
+            }
+
+            .footer_copy {
+                color: #888;
+                font-size: 12px;
+                margin-top: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <main>
+                <div class="title">
+                    <span class="logo_kakao"></span>
+                </div>
+                <div
+                    class="login_box"
+                    style="padding: 18px; border: 2px solid #f5f0f0">
+                    <div class="input_box">
+                        <input
+                            type="text"
+                            name="id"
+                            id="input"
+                            placeholder="카카오메일 아이디, 이메일, 전화번호" />
+                    </div>
+                    <div class="input_box">
+                        <input
+                            type="text"
+                            name="pw"
+                            id="input"
+                            placeholder="비밀번호" />
+                    </div>
+                    <div class="auto_log">
+                        <input type="checkbox" id="auto_login" />
+                        <label for="auto_login">자동 로그인</label>
+                    </div>
+                    <div class="login_btn">로그인</div>
+                    <div class="divider">
+                        <span>또는</span>
+                    </div>
+                    <div class="QR_log_btn">QR코드 로그인</div>
+                    <div class="bottom_area">
+                        <a class="left_link" href="#">회원가입</a>
+
+                        <div class="right_links">
+                            <a href="#">계정 찾기</a>
+                            <span class="bar">|</span>
+                            <a href="#">비밀번호 찾기</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer_links">
+                <span class="lang">한국어 ▼</span>
+                <span class="bar">|</span>
+                <a href="#">이용약관</a>
+                <span class="bar">|</span>
+                <a href="#">개인정보 처리방침</a>
+                <span class="bar">|</span>
+                <a href="#">고객센터</a>
+            </div>
+
+            <div class="footer_copy">© Kakao Corp.</div>
+        </footer>
+    </body>
+</html>
