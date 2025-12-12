@@ -12,23 +12,18 @@
                 padding: 0;
             }
             body {
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 font-family: sans-serif;
             }
             .container {
-                flex: 1;
                 display: flex;
                 justify-content: center;
-                align-items: center;
             }
             main {
-                width: 340px;
+                width: 400px;
                 text-align: center;
             }
             .title {
+                padding-top: 120px;
                 margin-bottom: 30px;
             }
             .logo_kakao {
@@ -37,19 +32,21 @@
                 height: 27px;
                 margin: 0 auto;
                 background-image: url("https://i.namu.wiki/i/IqmOmj71Vd9La5zunuoLdkOXMuy8BHcg2Hk5KN-oGgJp1gvlCytffdNpbUwd3P4WfORoqi7cad4f71d6uOgEug.svg");
-                background-size: 88px 27px;
+                background-size: contain;
                 background-repeat: no-repeat;
-                position: relative;
             }
             .input_box {
-                width: 100%;
-                margin-bottom: 10px;
+                margin-bottom: 16px;
+            }
+            .login_box {
+                padding: 28px 36px;
+                border: 1px solid #eee;
+                border-radius: 8px;
             }
 
             .input_box > input {
                 width: 100%;
                 height: 46px;
-                padding: 8px 0;
                 border: none;
                 background: none;
                 border-bottom: 1px solid #555;
@@ -57,6 +54,15 @@
                 font-weight: auto;
                 outline: none;
                 transition: all 0.16s ease;
+            }
+            .input_box > input[type="password"] {
+                letter-spacing: normal;
+            }
+            .input_box > input[type="password"]:not(:placeholder-shown) {
+                letter-spacing: 0.25em;
+            }
+            .input_box > input[type="password"]::placeholder {
+                letter-spacing: normal;
             }
 
             .input_box > input::placeholder {
@@ -74,6 +80,7 @@
                 align-items: center;
                 font-size: 13px;
                 color: #555;
+                margin-bottom: 12px;
             }
             .auto_log > input {
                 margin: 6px;
@@ -113,7 +120,7 @@
             }
             .QR_log_btn {
                 width: 100%;
-                background-color: #e7e7e7;
+                background-color: #efeeee;
                 border: none;
                 border-radius: 6px;
                 padding: 14px 0;
@@ -123,7 +130,7 @@
                 margin-top: 10px;
             }
             .QR_log_btn:hover {
-                background-color: #aeaeae;
+                background-color: rgb(235, 235, 235);
             }
             .bottom_area {
                 display: flex;
@@ -201,8 +208,7 @@
                     <span class="logo_kakao"></span>
                 </div>
                 <div
-                    class="login_box"
-                    style="padding: 18px; border: 2px solid #f5f0f0">
+                    class="login_box">
                     <div class="input_box">
                         <input
                             type="text"
@@ -212,7 +218,7 @@
                     </div>
                     <div class="input_box">
                         <input
-                            type="text"
+                            type="password"
                             name="pw"
                             id="input"
                             placeholder="비밀번호" />
